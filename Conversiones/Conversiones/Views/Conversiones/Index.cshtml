@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <div class="panel panel-primary">
+                <div class="panel-heading">Control de notas</div>
+                <div class="panel-body">
+                    <form action="/" method="post">
+                        <label>De:</label>
+                        <div class="form-group">
+                            <label class="radio-inline"><input type="radio" value="centimetro" name="unidadingresada">Centimetros</label>
+                            <label class="radio-inline"><input type="radio" value="metro" name="unidadingresada">Metros</label>
+                            <label class="radio-inline"><input type="radio" value="kilometro" name="unidadingresada">Kilometros</label>
+                            <label class="radio-inline"><input type="radio" value="milla" name="unidadingresada">Millas</label>
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <div class="col-md-8">
+                                <label class="text-info">Cantidad</label><input type="text" placeholder="Cantidad a convertir" class="form-control" name="cantidad" />
+                            </div>
+                        </div>
+                        <br /><br />
+                        <br />
+                        <label>Convertir a:</label>
+                        <div class="form-group">
+                            <label class="radio-inline"><input type="radio" value="centimetro" name="unidadesperada">Centimetros</label>
+                            <label class="radio-inline"><input type="radio" value="metro" name="unidadesperada">Metros</label>
+                            <label class="radio-inline"><input type="radio" value="kilometro" name="unidadesperada">Kilometros</label>
+                            <label class="radio-inline"><input type="radio" value="milla" name="unidadesperada">Millas</label>
+                        </div>
+                        <div class="col-sm-4"></div>
+                        <button type="submit" class="btn btn-danger">Convertir</button>
+                    </form>
+                    <br />
+                    <div class="jumbotron">@ViewBag.res</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
